@@ -1,0 +1,105 @@
+<style>
+  trip,
+  neccesities,
+  locations {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  pillow::before,
+  backpack::before,
+  cap::before {
+    border: 2px solid black;
+    content: attr(color);
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  pillow::before,
+  backpack::after,
+  cap::after {
+    border: 2px solid black;
+    content: attr(pattern);
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  london::before,
+  lake::before {
+    border: 2px solid black;
+    content: attr(name);
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  london::after,
+  lake::after {
+    border: 2px solid black;
+    content: attr(birdsSeen);
+    margin-right: 10px;
+    padding: 10px;
+  }
+</style>
+
+<h1>What we need for the trip in the forest (winks)</h1>
+
+<trip>
+  <h2>These are neccesities</h2>
+  <neccesities>
+    <cap color="purple" size="medium" pattern="dotts" />
+
+    <cap color="red" size="small" pattern="stripes" />
+
+    <backpack
+      color="green"
+      size="large"
+      compartiments="3"
+      pattern="camo"
+      brand="Columbia"
+    />
+
+    <pillow size="big" color="red" pattern="lines" brand="Gucci" />
+  </neccesities>
+
+  <h2>These are locations</h2>
+  <locations>
+    <lake name="Victoria" birdsSeen="20" />
+    <lake name="Lena" birdsSeen="11" />
+
+    <london name="Stratford" birdsSeen="10" area="vest" zone="lake" />
+    <london name="Canary Wharf" birdsSeen="0" area="est" zone="park" />
+  </locations>
+</trip>
+
+<h3>Take a look at the <b>Code</b> I used above:</h3>
+<pre>
+  &lt;trip&gt;
+    &lt;h2&gt;These are neccesities&lt;/h2&gt;
+    &lt;neccesities&gt;
+      &lt;cap color="purple" size="medium" pattern="dotts" /&gt;
+
+      &lt;cap color="red" size="small" pattern="stripes" /&gt;
+
+      &lt;backpack
+        color="green"
+        size="large"
+        compartiments="3"
+        pattern="camo"
+        brand="Columbia"
+      /&gt;
+
+      &lt;pillow size="big" color="red" pattern="lines" brand="Gucci" /&gt;
+    &lt;/neccesities&gt;
+
+    &lt;h2&gt;These are locations&lt;/h2&gt;
+    &lt;locations>
+      &lt;lake name="Victoria" birdsSeen="20" /&gt;
+      &lt;lake name="Lena" birdsSeen="11" /&gt;
+
+      &lt;london name="Stratford" birdsSeen="10" area="vest" zone="lake" /&gt;
+      &lt;london name="Canary Wharf" birdsSeen="0" area="est" zone="park" /&gt;
+      &lt;/locations&gt;
+  &lt;/trip&gt;
+
+</pre>

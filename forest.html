@@ -1,0 +1,169 @@
+<style>
+  forest {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  animals {
+    display: flex;
+    flex-direction: column;
+  }
+
+  insects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  raindeer::before {
+    border: 2px solid black;
+    content: attr(color);
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  raindeer::after {
+    border: 2px solid black;
+    content: attr(name);
+    margin-right: 10px;
+    padding: 10px;
+  }
+  butterfly::before {
+    border: 2px solid black;
+    content: attr(color);
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  butterfly::after {
+    border: 2px solid black;
+    content: attr(name);
+    margin-right: 10px;
+    padding: 10px;
+  }
+</style>
+
+<h1>
+  Welcome to the magic forest where you will encounter different living
+  creatures.
+</h1>
+<h2>Welcome to my forest! :-)</h2>
+<forest>
+  <h3>Bellow are animals</h3>
+  <animals>
+    <raindeer color="brown" age="3" name="Alma" size="huge" sex="female" />
+
+    <raindeer color="black" age="9" name="Owen" size="small" sex="male" />
+
+    <raindeer color="white" age="1" name="Elen" size="medium" sex="male" />
+  </animals>
+
+  <h3>Bellow are insects</h3>
+  <insects>
+    <butterfly color="yellow" age="2" name="Izma" size="small" pattern="dots" />
+
+    <butterfly
+      color="purple"
+      age="4"
+      name="Leylah"
+      size="big"
+      pattern="lines"
+    />
+
+    <butterfly
+      color="orange"
+      age="1"
+      name="Benny"
+      size="medium"
+      pattern="multicolor"
+    />
+  </insects>
+</forest>
+
+<h2>Take a look at the code that created the data above:</h2>
+<pre>
+<b>&lt;forest&gt;</b>
+  <b>&lt;animals&gt;</b>
+    <b>&lt;raindeer</b> <i>color</i>="brown" <i>age</i>="3" <i>name</i>="Alma" <i>size</i>="huge" <i>sex</i>="female" <b>/&gt;</b>
+
+    <b>&lt;raindeer</b> <i>color</i>="black" <i>age</i>="9" <i>name</i>="Owen" <i>size</i>="small" <i>sex</i>="male" <b>/&gt;</b>
+
+    <b>&lt;raindeer</b> <i>color</i>="white" <i>age</i>="1" <i>name</i>="Elen" <i>size</i>="medium" <i>sex</i>="male" <b>/&gt;</b>
+  <b>&lt;/animals&gt;</b>
+
+  <b>&lt;insects&gt;</b>
+      <b>&lt;butterfly</b> <i>color</i>="yellow" <i>age</i>="2" <i>name</i>="Izma" <i>size</i>="small" <i>pattern</i>="dots" <b>/&gt;</b>
+
+      <b>&lt;butterfly</b>
+        <i>color</i>="purple"
+        <i>age</i>="4"
+        <i>name</i>="Leylah"
+        <i>size</i>="big"
+        <i>pattern</i>="lines"
+      <b>/&gt;</b>
+
+      <b>&lt;butterfly</b>
+        <i>color</i>="orange"
+        <i>age</i>="1"
+        <i>name</i>="Benny"
+        <i>size</i>="medium"
+        <i>pattern</i>="multicolor"
+      <b>/&gt;</b>
+  <b>&lt;/insects&gt;</b>
+<b>&lt;/forest&gt;</b>
+</pre>
+
+<h3>After you had a good look on it, try to identify what is repeating.</h3>
+<p>
+  These are just some HTML tags that have some <i>attributes</i> with a value
+  that we chose.
+</p>
+
+<p>
+  The tag <b>&lt;forest&gt;&lt;/forest&gt;</b> represents the main
+  <i>parent</i> or <i>container</i> that holds the two different tags:
+  <b>&lt;animals&gt;&lt;/animals&gt;</b> and
+  <b>&lt;insects&gt;&lt;/insects&gt;</b>. They all behave as parents/containers
+  and need an <b><i>opening</i></b> and <b><i>closing</i></b> tag as they hold
+  other elements inside of them.
+</p>
+
+<pre>
+  <b>&lt;forest&gt;</b>
+    <b>&lt;animals&gt;</b>
+      .
+      .
+      .
+    <b>&lt;/animals&gt;</b>
+
+    <b>&lt;insects&gt;</b>
+      .
+      .
+      .
+    <b>&lt;/insects&gt;</b>
+  <b>&lt;/forest&gt;</b>
+</pre>
+
+<p>
+  If you take a better look, there are also tags that are
+  <b><i>self closed</i></b> because they do not hold anything else inside of
+  them, such as:
+</p>
+<pre>
+.
+  .
+    .
+      <b>&lt;raindeer</b> <i>color</i>="brown" <i>age</i>="3" <i>name</i>="Alma" <i>size</i>="huge" <i>sex</i>="female" <b>/&gt;</b>
+      .
+      .
+      <b>&lt;butterfly</b>
+        <i>color</i>="purple"
+        <i>age</i>="4"
+        <i>name</i>="Leylah"
+        <i>size</i>="big"
+        <i>pattern</i>="lines"
+      <b>/&gt;</b>
+    .
+  .
+.
+</pre>
